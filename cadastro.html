@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cadastre-se para participar das ações solidárias da ONG Mãos que Transformam.">
+    <title>Cadastro | Mãos que Transformam</title>
+    
+    
+    <link rel="icon" type="image/png" href="imagens/Cadastro.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html">Mãos que Transformam</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                    aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="projetos.html">Projetos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="cadastro.html">Seja voluntário</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="py-5 bg-light text-center">
+            <div class="container">
+                <h1 class="display-5 fw-bold text-success">Faça parte dessa transformação</h1>
+                <p class="lead">Preencha seus dados e demonstre seu interesse em colaborar.</p>
+            </div>
+        </section>
+
+        <section class="container py-5" aria-labelledby="titulo-formulario">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow-sm border-0">
+                        <div class="card-body p-4 p-md-5">
+                            <h2 id="titulo-formulario" class="h3 text-success mb-4">
+                                Cadastro de colaboradores
+                            </h2>
+
+                            <form id="formCadastro" class="needs-validation" novalidate>
+                                <fieldset class="mb-4">
+                                    <legend class="h5 text-success mb-3">1. Dados pessoais</legend>
+
+                                    <div class="mb-3">
+                                        <label for="nome" class="form-label">Nome completo</label>
+                                        <input type="text" class="form-control" id="nome" name="nome"
+                                            autocomplete="name" minlength="3" required>
+                                        <div class="invalid-feedback">
+                                            Informe seu nome completo.
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">E-mail</label>
+                                        <input type="email" class="form-control" id="email" name="email"
+                                            autocomplete="email" required>
+                                        <div class="invalid-feedback">
+                                            Informe um endereço de e-mail válido.
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="cpf" class="form-label">CPF</label>
+                                            <input type="text" class="form-control" id="cpf" name="cpf"
+                                                placeholder="000.000.000-00" inputmode="numeric" maxlength="14"
+                                                autocomplete="off" required>
+                                            <div class="invalid-feedback" id="erroCpf">
+                                                Informe um CPF válido.
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 mb-3">
+                                            <label for="telefone" class="form-label">Telefone</label>
+                                            <input type="tel" class="form-control" id="telefone" name="telefone"
+                                                placeholder="(00) 00000-0000" inputmode="numeric" maxlength="15"
+                                                autocomplete="tel" required>
+                                            <div class="invalid-feedback">
+                                                Informe um telefone com DDD válido.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+
+                                <fieldset class="mb-4">
+                                    <legend class="h5 text-success mb-3">2. Endereço</legend>
+
+                                    <div class="row">
+                                        <div class="col-md-5 mb-3">
+                                            <label for="cep" class="form-label">CEP</label>
+                                            <input type="text" class="form-control" id="cep" name="cep"
+                                                placeholder="00000-000" inputmode="numeric" maxlength="9"
+                                                autocomplete="postal-code" required>
+                                            <div class="invalid-feedback">
+                                                Informe um CEP com oito dígitos.
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-7 mb-3">
+                                            <label for="cidade" class="form-label">Cidade</label>
+                                            <input type="text" class="form-control" id="cidade" name="cidade"
+                                                autocomplete="address-level2" required>
+                                            <div class="invalid-feedback">
+                                                Informe sua cidade.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="estado" class="form-label">Estado</label>
+                                        <select class="form-select" id="estado" name="estado" required>
+                                            <option value="">Selecione seu estado</option>
+                                            <option value="AC">Acre</option>
+                                            <option value="AL">Alagoas</option>
+                                            <option value="AP">Amapá</option>
+                                            <option value="AM">Amazonas</option>
+                                            <option value="BA">Bahia</option>
+                                            <option value="CE">Ceará</option>
+                                            <option value="DF">Distrito Federal</option>
+                                            <option value="ES">Espírito Santo</option>
+                                            <option value="GO">Goiás</option>
+                                            <option value="MA">Maranhão</option>
+                                            <option value="MT">Mato Grosso</option>
+                                            <option value="MS">Mato Grosso do Sul</option>
+                                            <option value="MG">Minas Gerais</option>
+                                            <option value="PA">Pará</option>
+                                            <option value="PB">Paraíba</option>
+                                            <option value="PR">Paraná</option>
+                                            <option value="PE">Pernambuco</option>
+                                            <option value="PI">Piauí</option>
+                                            <option value="RJ">Rio de Janeiro</option>
+                                            <option value="RN">Rio Grande do Norte</option>
+                                            <option value="RS">Rio Grande do Sul</option>
+                                            <option value="RO">Rondônia</option>
+                                            <option value="RR">Roraima</option>
+                                            <option value="SC">Santa Catarina</option>
+                                            <option value="SP">São Paulo</option>
+                                            <option value="SE">Sergipe</option>
+                                            <option value="TO">Tocantins</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Selecione seu estado.
+                                        </div>
+                                    </div>
+                                </fieldset>
+
+                                <fieldset class="mb-4">
+                                    <legend class="h5 text-success mb-3">3. Como deseja ajudar?</legend>
+
+                                    <div class="mb-3">
+                                        <label for="tipo" class="form-label">Forma de participação</label>
+                                        <select class="form-select" id="tipo" name="tipo" required>
+                                            <option value="">Selecione uma opção</option>
+                                            <option value="voluntario">Voluntariado</option>
+                                            <option value="doador">Doações</option>
+                                            <option value="ambos">Voluntariado e doações</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Selecione uma forma de participação.
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="mensagem" class="form-label">
+                                            Mensagem (opcional)
+                                        </label>
+                                        <textarea class="form-control" id="mensagem" name="mensagem" rows="4"
+                                            maxlength="500" placeholder="Conte por que deseja participar."></textarea>
+                                    </div>
+                                </fieldset>
+
+                                <div class="form-check mb-4">
+                                    <input class="form-check-input" type="checkbox" id="consentimento"
+                                        name="consentimento" required>
+                                    <label class="form-check-label" for="consentimento">
+                                        Concordo com o uso dos meus dados para contato sobre
+                                        as ações da ONG.
+                                    </label>
+                                    <div class="invalid-feedback">
+                                        É necessário marcar o consentimento para continuar.
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn btn-success btn-lg w-100">
+                                    Enviar cadastro
+                                </button>
+
+                                <div id="resultado" class="mt-3" role="status" aria-live="polite"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p class="mb-1">&copy; 2026 Mãos que Transformam</p>
+            <small>Projeto acadêmico fictício.</small>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
